@@ -1,0 +1,33 @@
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+  
+  </head>
+  
+  <body>
+    <div class="main">
+      <div class="signup">
+          <label for="chk" aria-hidden="true"><u>List of Songs</u></label>
+          <div class="one_line">
+          <input type="text" placeholder="Enter song name" #task />
+          <button (click)="addTask(task.value)">Add Song</button>
+          </div>
+          <br>
+          <ul class="box2">
+            <li>astha</li>
+            <li>tapasi</li>
+            <li>pritha</li>
+            <li>arindam</li>
+          </ul>
+          <ul *ngFor="let item of list" class="box">
+          <div class="one_line">
+            <li >{{item.name}}</li>
+            <button (click)="removeTask(item.id)" class="remove_button"> Remove</button>
+          </div>
+          </ul>
+      </div>
+      <div style="display:flex"> 
+      <button >Save</button>
+		  <button >Log Out</button>
+      </div>
+    </div>
+  </body>
